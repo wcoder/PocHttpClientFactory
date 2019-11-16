@@ -94,7 +94,8 @@ namespace PocHttpClientFactory
             }
             
             // https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests
-
+            // https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0
+            
             _services
                 .AddRefitClient<TService>()
                 .ConfigureHttpClient(client => { client.BaseAddress = new Uri(baseUrl); })
